@@ -36,7 +36,8 @@
             
             $db = new Db();
             $statement = $db->connect->prepare("INSERT INTO `players_high_score`(`playerName`, `tag`, `highScore`) VALUES (?, ?, ?)");
-            $statement -> bind_param ("ssi", $_POST["playerName"], $_POST["tag"], $_COOKIE["score"]);
+            $tag = strtoupper($_POST["tag"]);
+            $statement -> bind_param ("ssi", $_POST["playerName"], $tag, $_COOKIE["score"]);
             $statement -> execute();
             $statement -> close();
             $db->connect->close();

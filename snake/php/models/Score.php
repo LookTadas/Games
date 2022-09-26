@@ -20,7 +20,7 @@
         {
             $score = [];
             $db = new Db();
-            $sql = "SELECT * FROM `players_high_score` ORDER BY `players_high_score`.`highScore` DESC";
+            $sql = "SELECT * FROM `players_high_score` ORDER BY `highScore` DESC";
             $result = $db->connect->query($sql);
             while ($row = $result->fetch_assoc())
             {

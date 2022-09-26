@@ -12,7 +12,6 @@
     $score = ScoreController::index();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +66,7 @@
     <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
         
-        require "./pages/snake.php";    
+        include "./pages/snake.php";    
         die;
     }
 ?>

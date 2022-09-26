@@ -102,9 +102,7 @@ function create_cookie(){
 function random_food(min, max){
     return Math.round((Math.random() * (max - min) + min) / 10) * 10;
 }
-console.log(random_food())
-console.log(snakeBoard.width)
-console.log(food_x)
+
 function gen_food(){
     food_x = random_food(0, snakeBoard.width - 10);
     food_y = random_food(0, snakeBoard.height - 10);
@@ -165,4 +163,3 @@ function move_snake(){
 
 
 
-// console.log(snake.forEach(drawSnakePart));

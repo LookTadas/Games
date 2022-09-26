@@ -8,8 +8,9 @@
         public $tag;
         public $highScore;
     
-        public function __construct ($id, $playerName, $tag, $highScore) 
+        public function __construct ($id = null, $playerName = null, $tag = null, $highScore = null) 
         {
+            $this->id = $id;
             $this->playerName = $playerName;
             $this->tag = $tag;
             $this->highScore = $highScore;
